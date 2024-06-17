@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Airplane.png" type="image/x-icon">
+    <title>Airplane Animation</title>
+    <style>
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .a{
+            height: 700px;
+            width: 1200px;
+            border-radius: 10px;
+            border: 5px solid black;
+            background-color: black;
+            position: relative;
+           
+            overflow: hidden;
+        }
+        .a img {
+            position: absolute;
+        }
+        .b{
+            height: 700px;
+            width: 1200px;
+            border-radius: 10px;
+        }
+        .c{
+            height: 100px;
+            width: 350px;
+            position: relative;
+            top: 150px;
+            left: 1250px;
+            animation: c-move 15s linear forwards;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation-iteration-count: infinite;
+        }
+        .d{
+            height: 200px;
+            width: 350px;
+            position: relative;
+            top: 532px;
+            left: -350px;
+            animation: d-move 20s linear backwards;
+            animation-iteration-count: infinite;
+        }
+        @keyframes c-move{
+            to{
+                transform: translate(-1650px);
+
+            }
+        }
+        @keyframes d-move{
+            to{
+                transform: translate(1550px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <img src="Background.jpg" alt="Error imgeag" class="b">
+        <img src="Airplane.png" alt="Error imgeag" class="c">
+        <img src="Cruise.webp" alt="Error imgeag" class="d">
+
+    </div>
+</body>
+</html>
